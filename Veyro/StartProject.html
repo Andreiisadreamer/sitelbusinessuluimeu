@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Veyro builds and designs modern, high-performing websites for businesses worldwide."
+    >
+
+    <link rel="stylesheet" href="startproject.css">
+
+    <title>Veyro | Create a Web</title>
+</head>
+
+<body>
+
+    <header>
+        <nav aria-label="Main Navigation">
+
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Veyro Logo">
+            </a>
+
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="create-hero">
+
+            <span class="eyebrow">CREATE A WEB</span>
+
+            <h1>Let's build something exceptional.</h1>
+
+            <p>
+                Tell us what you have in mind and we'll turn your idea
+                into a modern digital experience.
+            </p>
+
+        </section>
+
+
+        <!-- FORM -->
+
+        <section class="form-section">
+
+            <form action="/create-web" method="POST">
+
+
+                <!-- PROJECT TYPE -->
+
+                <div class="form-group">
+
+                    <label>Project Type</label>
+
+                    <div class="choice-grid">
+
+                        <label class="choice-card">
+                            <input
+                                type="radio"
+                                name="project_type"
+                                value="business"
+                                required
+                            >
+                            <span>Business Website</span>
+                        </label>
+
+                        <label class="choice-card">
+                            <input
+                                type="radio"
+                                name="project_type"
+                                value="portfolio"
+                            >
+                            <span>Portfolio</span>
+                        </label>
+
+                        <label class="choice-card">
+                            <input
+                                type="radio"
+                                name="project_type"
+                                value="ecommerce"
+                            >
+                            <span>E-commerce</span>
+                        </label>
+
+                        <label class="choice-card">
+                            <input
+                                type="radio"
+                                name="project_type"
+                                value="web_app"
+                            >
+                            <span>Web Application</span>
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BUSINESS NAME -->
+
+                <div class="form-group">
+
+                    <label for="business-name">
+                        Business / Project Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="business-name"
+                        name="business_name"
+                        placeholder="Enter your business or project name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- DESCRIPTION -->
+
+                <div class="form-group">
+
+                    <label for="project-description">
+                        What is your website about?
+                    </label>
+
+                    <textarea
+                        id="project-description"
+                        name="project_description"
+                        placeholder="Tell us a little about your business, idea or project..."
+                        rows="5"
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <!-- PAGES -->
+
+                <div class="form-group">
+
+                    <label>Pages you need</label>
+
+                    <div class="choice-grid">
+
+                        <label class="choice-card">
+                            <input
+                                type="checkbox"
+                                name="pages"
+                                value="home"
+                            >
+                            <span>Home</span>
+                        </label>
+
+                        <label class="choice-card">
+                            <input
+                                type="checkbox"
+                                name="pages"
+                                value="about"
+                            >
+                            <span>About</span>
+                        </label>
+
+                        <label class="choice-card">
+                            <input
+                                type="checkbox"
+                                name="pages"
+                                value="services"
+                            >
+                            <span>Services</span>
+                        </label>
+
+                        <label class="choice-card">
+                            <input
+                                type="checkbox"
+                                name="pages"
+                                value="contact"
+                            >
+                            <span>Contact</span>
+                        </label>
+
+                        <label class="choice-card">
+                            <input
+                                type="checkbox"
+                                name="pages"
+                                value="blog"
+                            >
+                            <span>Blog</span>
+                        </label>
+
+                        <label class="choice-card">
+                            <input
+                                type="checkbox"
+                                name="pages"
+                                value="other"
+                            >
+                            <span>Other</span>
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FEATURES -->
+
+                <div class="form-group">
+
+                    <label>Features</label>
+
+                    <div class="choice-grid">
+
+                        <label class="choice-card">
+                            <input
+                                type="checkbox"
+                                name="features"
+                                value="animations"
+                            >
+                            <span>Animations</span>
+                        </label>
+
+                        <label class="choice-card">
+                            <input
+                                type="checkbox"
+                                name="features"
+                                value="contact_form"
+                            >
+                            <span>Contact Form</span>
+                        </label>
+
+                        <label class="choice-card">
+                            <input
+                                type="checkbox"
+                                name="features"
+                                value="login"
+                            >
+                            <span>Login System</span>
+                        </label>
+
+                        <label class="choice-card">
+                            <input
+                                type="checkbox"
+                                name="features"
+                                value="dashboard"
+                            >
+                            <span>Dashboard</span>
+                        </label>
+
+                        <label class="choice-card">
+                            <input
+                                type="checkbox"
+                                name="features"
+                                value="payments"
+                            >
+                            <span>Payments</span>
+                        </label>
+
+                        <label class="choice-card">
+                            <input
+                                type="checkbox"
+                                name="features"
+                                value="other"
+                            >
+                            <span>Other</span>
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- VISUAL STYLE -->
+
+                <div class="form-group">
+
+                    <label>Visual Style</label>
+
+                    <div class="choice-grid">
+
+                        <label class="choice-card">
+                            <input
+                                type="radio"
+                                name="visual_style"
+                                value="minimal"
+                                required
+                            >
+                            <span>Minimal</span>
+                        </label>
+
+                        <label class="choice-card">
+                            <input
+                                type="radio"
+                                name="visual_style"
+                                value="luxury"
+                            >
+                            <span>Luxury</span>
+                        </label>
+
+                        <label class="choice-card">
+                            <input
+                                type="radio"
+                                name="visual_style"
+                                value="modern"
+                            >
+                            <span>Modern</span>
+                        </label>
+
+                        <label class="choice-card">
+                            <input
+                                type="radio"
+                                name="visual_style"
+                                value="dark"
+                            >
+                            <span>Dark</span>
+                        </label>
+
+                        <label class="choice-card">
+                            <input
+                                type="radio"
+                                name="visual_style"
+                                value="corporate"
+                            >
+                            <span>Corporate</span>
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BUDGET -->
+
+                <div class="form-group">
+
+                    <label for="budget">Budget</label>
+
+                    <select
+                        id="budget"
+                        name="budget"
+                        required
+                    >
+                        <option value="" disabled selected>
+                            Select your budget
+                        </option>
+
+                        <option value="under-500">
+                            Under €500
+                        </option>
+
+                        <option value="500-1000">
+                            €500 – €1,000
+                        </option>
+
+                        <option value="1000-2500">
+                            €1,000 – €2,500
+                        </option>
+
+                        <option value="2500-5000">
+                            €2,500 – €5,000
+                        </option>
+
+                        <option value="5000-plus">
+                            €5,000+
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- TIMELINE -->
+
+                <div class="form-group">
+
+                    <label for="timeline">Timeline</label>
+
+                    <select
+                        id="timeline"
+                        name="timeline"
+                        required
+                    >
+                        <option value="" disabled selected>
+                            When do you need the website?
+                        </option>
+
+                        <option value="asap">
+                            As soon as possible
+                        </option>
+
+                        <option value="2-4-weeks">
+                            2–4 weeks
+                        </option>
+
+                        <option value="1-2-months">
+                            1–2 months
+                        </option>
+
+                        <option value="2-plus-months">
+                            2+ months
+                        </option>
+
+                        <option value="flexible">
+                            I'm flexible
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- CONTACT -->
+
+                <div class="form-group">
+
+                    <label>Your Contact Information</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Your name"
+                        required
+                    >
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Your email address"
+                        required
+                    >
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Phone number (optional)"
+                    >
+
+                </div>
+
+
+                <!-- SUBMIT -->
+
+                <button
+                    type="submit"
+                    class="submit-button"
+                >
+                    SEND PROJECT
+                    <span>→</span>
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
+

@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Submit your redesign request to Veyro.">
+
+    <link rel="stylesheet" href="requestRedesign.css">
+
+    <title>Veyro | Redesign Request</title>
+</head>
+
+<body>
+
+    <header>
+        <nav aria-label="Main Navigation">
+            <a href="redesign.html" class="logo">
+                <img src="logo.png" alt="Veyro Logo">
+            </a>
+        </nav>
+    </header>
+
+    <main class="redesign-container">
+
+        <section class="request-intro">
+            <span class="eyebrow">REDESIGN REQUEST</span>
+
+            <h1>
+                Tell us what<br>
+                you would like to change.
+            </h1>
+
+            <p>
+                Tell us about your current website, your goals,
+                and the changes you'd like to see. We'll review
+                your request and get back to you shortly.
+            </p>
+        </section>
+
+
+        <form class="redesign-form" action="#" method="POST">
+
+
+            <!-- ABOUT YOU -->
+
+            <section class="form-section">
+
+                <div class="section-heading">
+                    <span>01</span>
+
+                    <div>
+                        <h2>About you</h2>
+                        <p>Let us know who we're working with.</p>
+                    </div>
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="full-name">
+                            Full name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="full-name"
+                            name="full_name"
+                            placeholder="Your full name"
+                            autocomplete="name"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="email">
+                            Email address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="company">
+                            Company / Brand
+                        </label>
+
+                        <input
+                            type="text"
+                            id="company"
+                            name="company"
+                            placeholder="Your company or brand"
+                            autocomplete="organization"
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="phone">
+                            Phone number
+                            <span>Optional</span>
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="+40 ..."
+                            autocomplete="tel"
+                        >
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- PROJECT -->
+
+            <section class="form-section">
+
+                <div class="section-heading">
+                    <span>02</span>
+
+                    <div>
+                        <h2>Your project</h2>
+                        <p>Tell us what you'd like to redesign.</p>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="website">
+                        Current website
+                    </label>
+
+                    <input
+                        type="url"
+                        id="website"
+                        name="website"
+                        placeholder="https://yourwebsite.com"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="project-type">
+                        What are you looking to redesign?
+                    </label>
+
+                    <select
+                        id="project-type"
+                        name="project_type"
+                        required
+                    >
+                        <option value="" disabled selected>
+                            Select an option
+                        </option>
+
+                        <option value="website">
+                            Website
+                        </option>
+
+                        <option value="landing-page">
+                            Landing page
+                        </option>
+
+                        <option value="ecommerce">
+                            E-commerce website
+                        </option>
+
+                        <option value="web-app">
+                            Web application
+                        </option>
+
+                        <option value="other">
+                            Other
+                        </option>
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="improvements">
+                        What would you like to improve?
+                    </label>
+
+                    <textarea
+                        id="improvements"
+                        name="improvements"
+                        rows="6"
+                        placeholder="Tell us what isn't working with your current website..."
+                        required
+                    ></textarea>
+
+                </div>
+
+            </section>
+
+
+            <!-- VISION -->
+
+            <section class="form-section">
+
+                <div class="section-heading">
+                    <span>03</span>
+
+                    <div>
+                        <h2>Your vision</h2>
+                        <p>Help us understand the direction you have in mind.</p>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        What style are you looking for?
+                    </label>
+
+                    <div class="choice-grid">
+
+                        <label class="choice">
+                            <input
+                                type="checkbox"
+                                name="style"
+                                value="minimal"
+                            >
+                            <span>Minimal</span>
+                        </label>
+
+                        <label class="choice">
+                            <input
+                                type="checkbox"
+                                name="style"
+                                value="modern"
+                            >
+                            <span>Modern</span>
+                        </label>
+
+                        <label class="choice">
+                            <input
+                                type="checkbox"
+                                name="style"
+                                value="premium"
+                            >
+                            <span>Premium</span>
+                        </label>
+
+                        <label class="choice">
+                            <input
+                                type="checkbox"
+                                name="style"
+                                value="dark"
+                            >
+                            <span>Dark</span>
+                        </label>
+
+                        <label class="choice">
+                            <input
+                                type="checkbox"
+                                name="style"
+                                value="corporate"
+                            >
+                            <span>Corporate</span>
+                        </label>
+
+                        <label class="choice">
+                            <input
+                                type="checkbox"
+                                name="style"
+                                value="creative"
+                            >
+                            <span>Creative</span>
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="vision">
+                        Tell us more
+                    </label>
+
+                    <textarea
+                        id="vision"
+                        name="vision"
+                        rows="7"
+                        placeholder="Describe your idea, references, goals or anything else you think we should know..."
+                    ></textarea>
+
+                </div>
+
+            </section>
+
+
+            <!-- BUDGET & PAYMENT -->
+
+            <section class="form-section">
+
+                <div class="section-heading">
+                    <span>04</span>
+
+                    <div>
+                        <h2>Budget & payment</h2>
+                        <p>Give us an idea of your expected investment.</p>
+                    </div>
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label for="currency">
+                            Currency
+                        </label>
+
+                        <select
+                            id="currency"
+                            name="currency"
+                            required
+                        >
+                            <option value="EUR">
+                                EUR (€)
+                            </option>
+
+                            <option value="USD">
+                                USD ($)
+                            </option>
+
+                            <option value="GBP">
+                                GBP (£)
+                            </option>
+
+                            <option value="RON">
+                                RON (lei)
+                            </option>
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="budget">
+                            Estimated budget
+                        </label>
+
+                        <input
+                            type="number"
+                            id="budget"
+                            name="budget"
+                            min="0"
+                            placeholder="e.g. 2000"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Preferred payment method
+                    </label>
+
+                    <div class="choice-grid">
+
+                        <label class="choice">
+                            <input
+                                type="radio"
+                                name="payment_method"
+                                value="bank-transfer"
+                            >
+                            <span>Bank Transfer</span>
+                        </label>
+
+                        <label class="choice">
+                            <input
+                                type="radio"
+                                name="payment_method"
+                                value="card"
+                            >
+                            <span>Card</span>
+                        </label>
+
+                        <label class="choice">
+                            <input
+                                type="radio"
+                                name="payment_method"
+                                value="paypal"
+                            >
+                            <span>PayPal</span>
+                        </label>
+
+                        <label class="choice">
+                            <input
+                                type="radio"
+                                name="payment_method"
+                                value="other"
+                            >
+                            <span>Other</span>
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="payment-preference">
+                        Payment preference
+                    </label>
+
+                    <select
+                        id="payment-preference"
+                        name="payment_preference"
+                    >
+                        <option value="" disabled selected>
+                            Select an option
+                        </option>
+
+                        <option value="upfront">
+                            Full payment upfront
+                        </option>
+
+                        <option value="split">
+                            50% upfront / 50% upon completion
+                        </option>
+
+                        <option value="discuss">
+                            I'd like to discuss this
+                        </option>
+                    </select>
+
+                </div>
+
+            </section>
+
+
+            <!-- FINAL DETAILS -->
+
+            <section class="form-section">
+
+                <div class="section-heading">
+                    <span>05</span>
+
+                    <div>
+                        <h2>Final details</h2>
+                        <p>Almost there.</p>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="deadline">
+                        Desired deadline
+                    </label>
+
+                    <input
+                        type="date"
+                        id="deadline"
+                        name="deadline"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="message">
+                        Anything else?
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        placeholder="Anything else you'd like us to know?"
+                    ></textarea>
+
+                </div>
+
+            </section>
+
+
+            <!-- SUBMIT -->
+
+            <div class="form-submit">
+
+                <p>
+                    By submitting this request, you agree that Veyro
+                    may contact you regarding your project.
+                </p>
+
+                <button type="submit">
+                    Submit request
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </form>
+
+    </main>
+
+</body>
+</html>
+
+

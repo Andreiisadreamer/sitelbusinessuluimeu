@@ -1,0 +1,950 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
+
+/* =========================================================
+ROOT
+========================================================= */
+
+:root {
+--bg: #070707;
+--bg-soft: #0c0c0c;
+
+
+--surface: rgba(255, 255, 255, 0.035);
+--surface-hover: rgba(255, 255, 255, 0.055);
+
+--white: #f2f5f2;
+--white-soft: #b7b7b2;
+--muted: #73736e;
+
+--line: rgba(255, 255, 255, 0.09);
+--line-hover: rgba(255, 255, 255, 0.18);
+
+--accent: #d9d6ca;
+
+--font-main: "DM Sans", sans-serif;
+--font-display: "Manrope", sans-serif;
+
+--max-width: 1100px;
+
+
+}
+
+/* =========================================================
+RESET
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+min-height: 100vh;
+
+
+background:
+    radial-gradient(
+        circle at 50% 0%,
+        rgba(255, 255, 255, 0.035),
+        transparent 38%
+    ),
+    var(--bg);
+
+color: var(--white);
+
+font-family: var(--font-main);
+
+overflow-x: hidden;
+
+
+}
+
+/* =========================================================
+GRAIN / FILM EFFECT
+========================================================= */
+
+body::before {
+content: "";
+
+
+position: fixed;
+inset: 0;
+
+pointer-events: none;
+
+z-index: 9999;
+
+opacity: 0.035;
+
+background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E");
+
+
+}
+
+/* =========================================================
+HEADER
+========================================================= */
+
+header {
+position: fixed;
+
+top: 0;
+left: 0;
+
+width: 100%;
+
+z-index: 1000;
+
+pointer-events: none;
+
+}
+
+/* =========================================================
+LOGO
+========================================================= */
+
+.logo {
+position: fixed;
+
+top: 32px;
+left: 40px;
+
+width: 70px;
+height: 70px;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+z-index: 10000;
+
+pointer-events: auto;
+
+transition:
+    transform 0.35s ease,
+    opacity 0.35s ease;
+
+}
+
+.logo img {
+width: 70px;
+height: 70px;
+
+
+display: block;
+
+object-fit: cover;
+
+border-radius: 50%;
+
+border: 1px solid rgba(255, 255, 255, 0.14);
+
+box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.45),
+    0 0 25px rgba(255, 255, 255, 0.04);
+
+transition:
+    transform 0.35s ease,
+    border-color 0.35s ease;
+
+
+}
+
+.logo:hover img {
+transform: scale(1.04);
+
+
+border-color: rgba(255, 255, 255, 0.28);
+
+}
+
+/* =========================================================
+MAIN
+========================================================= */
+
+main {
+width: 100%;
+}
+
+/* =========================================================
+ABOUT SECTIONS
+========================================================= */
+
+.about-section {
+position: relative;
+
+
+width: min(var(--max-width), calc(100% - 80px));
+
+margin: 0 auto;
+
+padding: 150px 0;
+
+border-bottom: 1px solid var(--line);
+
+}
+
+/* subtle grid */
+
+.about-section::before {
+content: "";
+
+
+position: absolute;
+
+inset: 0;
+
+z-index: -1;
+
+pointer-events: none;
+
+background-image:
+    linear-gradient(
+        rgba(255, 255, 255, 0.025) 1px,
+        transparent 1px
+    ),
+    linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.025) 1px,
+        transparent 1px
+    );
+
+background-size: 80px 80px;
+
+mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+);
+
+-webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+);
+
+
+}
+
+/* =========================================================
+FIRST SECTION
+========================================================= */
+
+.who-i-am {
+min-height: 100vh;
+
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+
+padding-top: 180px;
+
+
+}
+
+/* =========================================================
+EYEBROW
+========================================================= */
+
+.eyebrow {
+display: inline-block;
+
+
+margin-bottom: 32px;
+
+color: var(--muted);
+
+font-family: var(--font-main);
+
+font-size: 11px;
+font-weight: 600;
+
+letter-spacing: 0.18em;
+
+text-transform: uppercase;
+
+
+}
+
+/* =========================================================
+HEADINGS
+========================================================= */
+
+.about-section h1,
+.about-section h2 {
+max-width: 1000px;
+
+
+margin-bottom: 55px;
+
+color: var(--white);
+
+font-family: var(--font-display);
+
+font-weight: 300;
+
+letter-spacing: -0.055em;
+
+line-height: 0.98;
+
+}
+
+.about-section h1 {
+font-size: clamp(58px, 9vw, 130px);
+}
+
+.about-section h2 {
+font-size: clamp(52px, 7vw, 100px);
+}
+
+/* =========================================================
+CONTENT
+========================================================= */
+
+.about-content {
+max-width: 680px;
+
+
+margin-left: auto;
+
+
+}
+
+.about-content p {
+margin-bottom: 28px;
+
+
+color: var(--white-soft);
+
+font-size: 18px;
+
+font-weight: 400;
+
+line-height: 1.8;
+
+
+}
+
+.about-content p:last-child {
+margin-bottom: 0;
+}
+
+.about-content strong {
+color: var(--white);
+
+
+font-weight: 600;
+
+
+}
+
+/* =========================================================
+SKILLS GRID
+========================================================= */
+
+.skills-grid {
+display: grid;
+
+
+grid-template-columns: repeat(2, 1fr);
+
+margin-top: 110px;
+
+border-top: 1px solid var(--line);
+border-left: 1px solid var(--line);
+
+
+}
+
+
+.skill {
+min-height: 260px;
+
+
+padding: 38px;
+
+border-right: 1px solid var(--line);
+border-bottom: 1px solid var(--line);
+
+background: var(--surface);
+
+transition:
+    background 0.35s ease,
+    border-color 0.35s ease;
+
+
+}
+
+.skill:hover {
+background: var(--surface-hover);
+
+
+border-color: var(--line-hover);
+
+}
+
+.skill span {
+display: block;
+
+margin-bottom: 70px;
+
+color: var(--muted);
+
+font-size: 11px;
+
+letter-spacing: 0.14em;
+
+
+}
+
+.skill h3 {
+margin-bottom: 14px;
+
+
+color: var(--white);
+
+font-family: var(--font-display);
+
+font-size: 25px;
+
+font-weight: 500;
+
+letter-spacing: -0.03em;
+
+
+}
+
+.skill p {
+max-width: 300px;
+
+
+color: var(--muted);
+
+font-size: 14px;
+
+line-height: 1.7;
+
+
+}
+
+/* =========================================================
+TECHNOLOGIES
+========================================================= */
+
+.tech-list {
+display: flex;
+
+
+flex-wrap: wrap;
+
+gap: 10px;
+
+margin: 80px 0 70px;
+
+
+}
+
+.tech-list span {
+padding: 14px 20px;
+
+
+border: 1px solid var(--line);
+
+border-radius: 999px;
+
+background: var(--surface);
+
+color: var(--white-soft);
+
+font-size: 13px;
+
+letter-spacing: 0.03em;
+
+transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
+
+
+}
+
+.tech-list span:hover {
+background: var(--surface-hover);
+
+border-color: var(--line-hover);
+
+color: var(--white);
+
+
+}
+
+/* =========================================================
+VEYRO SECTION
+========================================================= */
+
+.veyro-section {
+padding-top: 180px;
+padding-bottom: 180px;
+}
+
+.veyro-section h2 {
+max-width: 850px;
+}
+
+/* =========================================================
+GOAL SECTION
+========================================================= */
+
+.goal-section {
+min-height: 85vh;
+
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+
+
+}
+
+.goal-section h2 {
+max-width: 900px;
+}
+
+.goal-section .about-content {
+margin-top: 20px;
+}
+
+/* =========================================================
+CTA
+========================================================= */
+
+.about-cta {
+width: min(var(--max-width), calc(100% - 80px));
+
+margin: 0 auto;
+
+min-height: 75vh;
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+text-align: center;
+
+padding: 120px 0;
+
+
+}
+
+.about-cta .eyebrow {
+margin-bottom: 30px;
+}
+
+.about-cta h2 {
+margin-bottom: 20px;
+
+
+color: var(--white);
+
+font-family: var(--font-display);
+
+font-size: clamp(60px, 9vw, 125px);
+
+font-weight: 300;
+
+letter-spacing: -0.06em;
+
+line-height: 0.95;
+
+
+}
+
+.about-cta p {
+margin-bottom: 45px;
+
+
+color: var(--muted);
+
+font-size: 17px;
+
+
+}
+
+/* =========================================================
+CTA BUTTON
+========================================================= */
+
+.cta-button {
+position: relative;
+
+
+display: inline-flex;
+
+align-items: center;
+justify-content: center;
+
+gap: 24px;
+
+min-width: 210px;
+
+padding: 18px 28px;
+
+overflow: hidden;
+
+border: 1px solid rgba(255, 255, 255, 0.15);
+
+border-radius: 999px;
+
+background: var(--white);
+
+color: #080808;
+
+font-size: 12px;
+
+font-weight: 700;
+
+letter-spacing: 0.12em;
+
+text-decoration: none;
+
+transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+
+
+}
+
+.cta-button span {
+font-size: 18px;
+
+
+transition: transform 0.3s ease;
+
+
+}
+
+.cta-button::before {
+content: "";
+
+
+position: absolute;
+
+top: 0;
+left: -120%;
+
+width: 80%;
+height: 100%;
+
+background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.7),
+    transparent
+);
+
+transform: skewX(-20deg);
+
+transition: left 0.7s ease;
+
+
+}
+
+.cta-button:hover {
+transform: translateY(-3px);
+
+
+background: #ffffff;
+
+box-shadow:
+    0 14px 40px rgba(0, 0, 0, 0.35);
+
+
+}
+
+.cta-button:hover span {
+transform: translateX(5px);
+}
+
+.cta-button:hover::before {
+left: 140%;
+}
+
+/* =========================================================
+REVEAL ANIMATION
+========================================================= */
+
+.about-section,
+.about-cta {
+animation: revealUp 0.9s ease both;
+}
+
+@keyframes revealUp {
+from {
+opacity: 0;
+
+
+    transform: translateY(30px);
+}
+
+to {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+}
+
+/* =========================================================
+TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+.logo {
+    top: 28px;
+    left: 28px;
+}
+
+.logo,
+.logo img {
+    width: 60px;
+    height: 60px;
+}
+
+.about-section {
+    width: min(100% - 50px, var(--max-width));
+
+    padding: 120px 0;
+}
+
+.who-i-am {
+    min-height: 90vh;
+
+    padding-top: 150px;
+}
+
+.about-content {
+    margin-left: 0;
+
+    max-width: 720px;
+}
+
+.skills-grid {
+    margin-top: 80px;
+}
+
+.skill {
+    min-height: 230px;
+}
+
+.about-cta {
+    width: calc(100% - 50px);
+
+    min-height: 65vh;
+}
+
+
+}
+
+/* =========================================================
+MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+
+.logo {
+    top: 22px;
+    left: 20px;
+}
+
+.logo,
+.logo img {
+    width: 52px;
+    height: 52px;
+}
+
+.about-section {
+    width: calc(100% - 40px);
+
+    padding: 95px 0;
+}
+
+.who-i-am {
+    min-height: auto;
+
+    padding-top: 150px;
+    padding-bottom: 100px;
+}
+
+.about-section h1 {
+    font-size: clamp(48px, 15vw, 76px);
+
+    margin-bottom: 40px;
+
+    line-height: 0.98;
+}
+
+.about-section h2 {
+    font-size: clamp(43px, 13vw, 65px);
+
+    margin-bottom: 40px;
+}
+
+.eyebrow {
+    margin-bottom: 24px;
+
+    font-size: 10px;
+}
+
+.about-content p {
+    font-size: 16px;
+
+    line-height: 1.75;
+
+    margin-bottom: 23px;
+}
+
+.skills-grid {
+    grid-template-columns: 1fr;
+
+    margin-top: 65px;
+}
+
+.skill {
+    min-height: 210px;
+
+    padding: 28px;
+}
+
+.skill span {
+    margin-bottom: 45px;
+}
+
+.skill h3 {
+    font-size: 22px;
+}
+
+.tech-list {
+    gap: 8px;
+
+    margin: 55px 0;
+}
+
+.tech-list span {
+    padding: 11px 15px;
+
+    font-size: 12px;
+}
+
+.veyro-section,
+.goal-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.goal-section {
+    min-height: auto;
+}
+
+.about-cta {
+    width: calc(100% - 40px);
+
+    min-height: 65vh;
+
+    padding: 100px 0;
+}
+
+.about-cta h2 {
+    font-size: clamp(55px, 17vw, 85px);
+}
+
+.about-cta p {
+    font-size: 15px;
+
+    margin-bottom: 35px;
+}
+
+.cta-button {
+    width: 100%;
+
+    max-width: 280px;
+
+    padding: 17px 24px;
+}
+
+
+
+/* =========================================================
+SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+.logo {
+    top: 18px;
+    left: 16px;
+}
+
+.logo,
+.logo img {
+    width: 48px;
+    height: 48px;
+}
+
+.about-section {
+    width: calc(100% - 32px);
+
+    padding: 80px 0;
+}
+
+.about-section h1 {
+    font-size: 45px;
+}
+
+.about-section h2 {
+    font-size: 40px;
+}
+
+.skill {
+    padding: 24px;
+}
+
+.about-cta {
+    width: calc(100% - 32px);
+}
+
+}
+
+/* =========================================================
+REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+html {
+    scroll-behavior: auto;
+}
+
+*,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+}
+
+}
+}
